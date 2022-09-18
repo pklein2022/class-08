@@ -1,14 +1,18 @@
+import { userService } from "../user/user.service.js";
 export default class Home {
   constructor() {
     //When home instance is created, call render
     this.render();
+    // console.log(userService.user.username)
+    // userService.next(userService.user.username);
   }
 
   //render elements onto the Home page
   render() {
     let appELement = document.getElementById("app");
-    appELement.innerHTML += `
-        <h1 class='text-center'>Social Media Page</h1>
-         `;
-  }
+    appELement.insertAdjacentHTML(
+      "beforeend",
+      ` <h1 class='text-center'>Social Media Page</h1>`
+    );
+   }
 }
