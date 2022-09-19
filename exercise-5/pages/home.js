@@ -12,7 +12,13 @@ export default class Home {
     let appELement = document.getElementById("app");
     appELement.insertAdjacentHTML(
       "beforeend",
-      ` <h1 class='text-center'>Social Media Page</h1>`
+      ` <h1 class='text-center'>Social Media Page</h1>
+      <div class="text-center">
+      username: status
+      <button type="submit" class="btn btn-primary" id="like-btn">Like</button>
+  </div>   
+      `
+
     );
    }
 }
